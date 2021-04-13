@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
+        "Trebuchet MS", sans-serif;
+    background: #333;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+.portfolio {
+    position: relative;
+    width: calc(100% - 250px);
+}
+.mymixcont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.mix {
+    position: relative;
+    width: 280px;
+    height: 200px;
+    box-shadow: 5px 5px 5px black, -3px -3px 5px rgba(255, 255, 255, 0.05);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mix img {
+    height: 80%;
+    transition: 0.5s ease-in-out;
+}
+
+.mix span.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 0 0 10px 10px;
+    background: rgba(0, 0, 0, 0.301);
+    color: #ccc;
+    z-index: -1;
+    transition: 0.5s 0s ease-in-out;
+}
+
+.mix:hover img {
+    transform: translateY(-50px) rotateX(25deg);
+}
+
+.mix:hover span.title {
+    transition-delay: 0.3s;
+    transform: translateY(10px) rotateX(-25deg);
+}
+
+.port_link {
+    position: absolute;
+    bottom: 25%;
+    z-index: -1;
+    color: #f64253;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tip {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background: #000;
+    z-index: -100;
+    margin-left: 125px;
+    transition: 0.5s;
+}
+
+.tip.view {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+}
+
+.tip .allContent {
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    background: #0d1117;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.4s 0.3s;
+}
+
+.tip .allContent::-webkit-scrollbar {
+    width: 0;
+}
+
+.tip.view .allContent {
+    transform: scale(1);
+}
+
+.tip .allContent .description {
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.tip .allContent .description .pro_intro {
+    width: 60%;
+}
+
+.tip .allContent .description .pro_info {
+    width: 30%;
+}
+
+.tip .allContent .description .pro_info a {
+    color: crimson;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tip .allContent .description .pro_info a:hover {
+    text-decoration: 2px underline;
+}
+
+.tip .exitButton {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 50px;
+    outline: none;
+    background: transparent;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    transition: 0.25s;
+    float: right;
+    margin: 25px 25px 0 0;
+    cursor: pointer;
+}
+
+.tip .exitButton:hover {
+    background: #d72028;
+}
+
+.tip .closeButton {
+    padding: 7px 15px;
+    background: #ff0059;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 500px;
+    border: none;
+    outline: none;
+    margin-left: 100px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.tip .closeButton .icon {
+    position: relative;
+    float: right;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-top: 7.5px;
+}
+
+.tip .closeButton .icon::before,
+.tip .closeButton .icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: #fff;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: 0.3s ease-in-out;
+}
+
+.tip .closeButton .icon::before {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.tip .closeButton .icon.active::before {
+    transform: translate(-50%, -50%) rotate(00deg);
+}
+
+.tip .port_content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Swiper animation for images */
+.tip .swiper-container-2 {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+}
+
+.tip .swiper-slide {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #fff;
+}
+
+.tip .swiper-container-2 .swiper-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 748px) {
+    .tip .allContent .description {
+        flex-direction:  column;
+    }
+}
+
+@media (max-width: 628px) {
+    .about_nav {
+        margin-bottom: 100px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 377px) {
+    .about_nav {
+        margin-top: 100px;
+        margin-bottom: 200px;
+    }
+
+    .about_nav ul li {
+        display: block;
+    }
+}
+
+@media (max-width: 290px) {
+    .about_nav {
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+}

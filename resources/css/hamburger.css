@@ -1,0 +1,160 @@
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    margin-left: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    cursor: pointer;
+    display: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: .5s ease-in-out;
+}
+
+.hamburger.active {
+    margin-left: 200px;
+}
+
+.hamburger .bar1,
+.hamburger .bar2,
+.hamburger .bar3 {
+    position: absolute;
+    width: 30px;
+    height: 6px;
+    border-radius: 200px;
+    background: white;
+    transition: 0.5s ease-in-out;
+}
+
+.hamburger:hover .bar1,
+.hamburger:hover .bar2,
+.hamburger:hover .bar3 {
+    width: 40px;
+}
+
+.hamburger .bar1 {
+    transform: translate(0, -15px);
+    animation: no_bar1 0.75s linear 0s 1 forwards;
+}
+
+.hamburger .bar3 {
+    transform: translate(0, 15px);
+    animation: no_bar3 0.75s linear 0s 1 forwards;
+}
+
+.hamburger .bar3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    border-radius: 10px;
+    background: white;
+    height: 6px;
+    transition: 0.5s ease-in-out;
+}
+
+.hamburger:hover .bar3::after {
+    width: 40px;
+}
+
+
+
+@keyframes no_bar1 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    33.33% {
+        transform: translate(0, 0);
+    }
+
+    66.66% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, -15px);
+    }
+}
+
+@keyframes no_bar3 {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    33.33% {
+        transform: translate(0, 0);
+    }
+
+    66.66% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 15px);
+    }
+}
+
+.hamburger.active .bar1 {
+    animation: bar1 0.75s linear 0s 1 forwards;
+    animation: name duration timing-function delay iteration-count direction
+        fill-mode;
+}
+
+@keyframes bar1 {
+    0% {
+        transform: translate(0, -15px);
+    }
+
+    33.33% {
+        transform: translate(0, 0);
+    }
+
+    66.66% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+.hamburger.active .bar3 {
+    animation: bar3 0.75s linear 0s 1 forwards;
+}
+
+@keyframes bar3 {
+    0% {
+        transform: translate(0, 15px);
+    }
+
+    33.33% {
+        transform: translate(0, 0);
+    }
+
+    66.66% {
+        transform: translate(0, 0);
+        height: 16px;
+        background: transparent;
+    }
+
+    100% {
+        transform: rotate(-45deg);
+        height: 16px;
+        background: transparent;
+    }
+}
+
+.hamburger.active .bar2 {
+    width: 0;
+}

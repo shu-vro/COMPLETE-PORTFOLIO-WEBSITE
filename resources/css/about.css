@@ -1,0 +1,565 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Script&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+.layer1 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
+        "Trebuchet MS", sans-serif;
+    background: #0d1117;
+}
+
+.styling {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.absolute {
+    position: absolute;
+    user-select: none;
+}
+
+.box {
+    top: 95%;
+    left: 8%;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #b105ca;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: rotate 5s linear 0s infinite forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.circle {
+    top: -50px;
+    left: 30%;
+    border: 10px solid #d0154e;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.triangle {
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%) rotate(190deg);
+    border-top: 20px solid #21d5ab67;
+    border-left: 20px solid #21d5ab67;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    z-index: 1;
+    animation: up_down 5s ease-in-out 0s infinite forwards;
+}
+
+@keyframes up_down {
+    0%,
+    100% {
+        transform: translate(-50%, -50%) rotate(190deg);
+    }
+
+    50% {
+        transform: translate(-50%, 150%) rotate(190deg);
+    }
+}
+
+.triangle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-top: 20px solid #267ff4;
+    border-left: 20px solid #267ff4;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    transform: translate(-90%, -30%);
+    z-index: -1;
+}
+
+.dots {
+    top: 18%;
+    left: 57%;
+    width: 50px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.dots .dot {
+    background: #f0ce35;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+}
+
+.wave {
+    bottom: 0;
+    left: 0;
+    stroke-width: 10px;
+    stroke: #1c2635;
+    fill: transparent;
+    z-index: 0;
+    stroke-linecap: round;
+    stroke-dasharray: 3400px;
+    stroke-dashoffset: 3400px;
+    animation: dash 8s ease-in-out 0s 1 forwards;
+}
+
+.wave.opposite {
+    top: 100%;
+    bottom: inherit;
+    transform: rotateX(180deg);
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 6800px;
+    }
+
+    45% {
+        stroke-dashoffset: 3400px;
+    }
+
+    90% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+
+    100% {
+        fill: #1c2635;
+    }
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 100;
+    color: white;
+}
+
+.wrapper .face {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper .face.face1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 75px;
+}
+
+.face.face1 h1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 4.5vw;
+}
+
+.face.face1 p {
+    font-family: "League Script", cursive;
+    font-size: 22px;
+}
+
+.wrapper .face.face2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/bg1.png") no-repeat right bottom;
+    background-size: contain;
+}
+
+.face.face1 h1 span,
+.face.face1 p span {
+    display: inline-block;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 15px 20px;
+    font-size: 35px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+    width: 35%;
+}
+
+.button.download {
+    background: url("../img/btn4.png") no-repeat 50% 50%;
+    background-size: 100% 100%;
+}
+
+.button.hire {
+    background: url("../img/btn3.png") no-repeat 50% 50%;
+    background-size: 100% 110%;
+}
+
+.about_nav {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_nav ul {
+    position: relative;
+}
+
+.about_nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+
+.about_nav ul li a {
+    font-size: 25px;
+    padding: 15px 30px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    transition: .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+.about_nav ul li a:hover {
+    color: dodgerblue;
+}
+
+.about_nav ul li a.active {
+    color: dodgerblue;
+    box-shadow: inset 5px 5px 10px black, inset -3px -3px 5px #ffffff25;
+}
+
+.about_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 50vh;
+    width: calc(var(--width) * 3);
+    margin-left: 0;
+    transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.about_container.one {
+    margin-left: 0;
+}
+
+.about_container.two {
+    margin-left: calc(var(--width) * -1);
+}
+
+.about_container.three {
+    margin-left: calc(var(--width) * -2);
+}
+
+.skills {
+    width: 100%;
+    height: 100%;
+}
+.education {
+    width: 100%;
+    height: 100%;
+}
+
+.skills {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50vh;
+    width: 100%;
+}
+
+.skills .skill {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    margin: 22px 50px;
+    height: 28px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.25s ease-in-out;
+}
+
+.skill .name {
+    position: absolute;
+    top: 0%;
+    /* color: white; */
+}
+
+.skill .value {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    /* color: white; */
+}
+
+.skill .percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 20px;
+    border-radius: 100px;
+    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.348), inset 3px 3px 5px rgba(0, 0, 0, 0.359),
+        inset -3px -3px 3px rgba(255, 255, 255, 0.09), inset -3px -3px 5px rgba(255, 255, 255, .09);
+}
+
+.skill .percent .progress {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translate(0%, -50%);
+    height: 10px;
+    width: 90%;
+    background: white;
+    border-radius: 100px;
+}
+
+/* EXPERIENCE */
+/* EDUCATION */
+/* BASIC STYLINGS */
+.middle_line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 5px;
+    height: 100%;
+    background: #333;
+    border-radius: 5px;
+}
+
+.experience, 
+.education {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+
+.cover:nth-child(even) {
+    justify-self: end;
+}
+
+.cover:nth-child(odd) {
+    justify-self: start;
+}
+
+.cover {
+    position: relative;
+    width: 70%;
+    height: 250px;
+    color: #ccc;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: inset 5px 5px 10px black, inset -3px -3px 5px #ffffff25;
+}
+
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -15px;
+    transform: rotate(135deg);
+    border-left: 15px solid rgba(255, 255, 255, 0.3);
+    border-top: 15px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.cover:nth-child(odd)::before {
+    left: -15px;
+    right: inherit;
+    transform: rotate(-45deg);
+} 
+
+.cover .job_box {
+    position: absolute;
+    top: 18%;
+    right: -75px;
+    font-size: 30px;
+    border-radius: 50%;
+    background: #267ff4;
+    /* color: white; */
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.cover:nth-child(odd) .job_box {
+    position: absolute;
+    top: 20%;
+    left: -75px;
+    right: inherit;
+    font-size: 30px;
+}
+
+.cover:last-child {
+    margin-bottom: 100px;
+}
+
+/* MAIN CONTENT OF EXPERIENCE */
+/* MAIN CONTENT OF EDUCATION */
+.cover:nth-child(even) {
+    text-align: right;
+}
+
+.date {
+    color: crimson;
+    font-weight: bold;
+}
+
+.name_company {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.text_hidden {
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+}
+.text_hidden::-webkit-scrollbar {
+    width: 5px;
+}
+
+@media (max-width: 1024px) {
+    .button {
+        display: block;
+        margin: 0;
+    }
+}
+
+@media (max-width: 582px) {
+    .skills {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 50vh;
+        width: 100%;
+    }
+    .whitespace {
+        display: none;
+    }
+
+    .experience, .education {
+        position: relative;
+        width: 100%;
+        min-height: 50vh;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cover {
+        margin-right: 20px;
+    }
+
+    .cover:nth-child(odd) .job_box {
+        position: absolute;
+        top: 40px;
+        left: -25%;
+        right: inherit;
+        font-size: 30px;
+    }
+    .cover:nth-child(even) .job_box {
+        top: 40px;
+        left: -25%;
+        right: inherit;
+        font-size: 30px;
+    }
+    .cover::before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: -15px;
+        right: inherit;
+        transform: rotate(314deg);
+        border-left: 15px solid rgba(255, 255, 255, 0.3);
+        border-top: 15px solid rgba(255, 255, 255, 0.4);
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid transparent;
+    }
+
+    .middle_line {
+        left: 28px;
+    }
+
+    .cover:nth-child(even) {
+        justify-self: right;
+    }
+
+    .cover:nth-child(odd) {
+        justify-self: right;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrapper .face.face2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: .3;
+    }
+}
+
+@media (max-width: 366px) {
+    .cover::before {
+        display: none;
+    }
+    .cover:nth-child(odd) .job_box {
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        left: inherit;
+        font-size: 30px;
+    }
+    .cover:nth-child(even) .job_box {
+        top: 40px;
+        left: 30px;
+        right: inherit;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 290px) {
+    .wrapper .face.face1 {
+        padding: 0;
+    }
+    .face.face1 p {
+        font-family: "League Script", cursive;
+        font-size: 22px;
+        text-align: center;
+    }
+}
