@@ -516,3 +516,10 @@ ARROW (DISABLE) */
         -webkit-text-stroke: 1px aqua;
     }
 }
+
+@media (max-height: 778px) {
+    .services .foot {
+        width: 100%;
+        min-height: 200vh;
+    }
+}
