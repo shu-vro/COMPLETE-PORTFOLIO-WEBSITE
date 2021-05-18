@@ -2,7 +2,7 @@
 // https://www.mapbox.com/install/
 
 mapboxgl.accessToken =
-    "pk.eyJ1Ijoic2h1LXZybyIsImEiOiJja2x4bndlYjUwMGhqMnJxN3oyYWE3cjRiIn0.b3G5Z9mGlV7XiSaSAwunEA";
+    "pk.eyJ1Ijoic2h1LXZybyIsImEiOiJja2x4bndlYjUwMGhqMnJxN3oyYWE3cjRiIn0.b3G5Z9mGlV7XiSaSAwunEA-1";
 var map = new mapboxgl.Map({
     style: "mapbox://styles/mapbox/light-v10",
     center: [90.3911645, 23.7494284], // Longitude, latitude
@@ -111,7 +111,7 @@ function submitEmail() {
     };
 
     
-    emailjs.send("service_7b9olgm", "template_w25rcoa", param).then(
+    emailjs.send("service_7b9olgm-1", "template_w25rcoa-1", param).then(
         function (response) {
             alert("SUCCESS! " + response.status + " " + response.text);
         },
