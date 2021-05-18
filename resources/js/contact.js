@@ -112,7 +112,7 @@ function submitEmail() {
     };
 
     
-    emailjs.send("service_7b9olgm", "template_w25rcoa", param).then(
+    emailjs.send("service_c6virom", "template_w25rcoa", param).then(
         function (response) {
             alert("SUCCESS! " + response.status + " " + response.text);
         },
