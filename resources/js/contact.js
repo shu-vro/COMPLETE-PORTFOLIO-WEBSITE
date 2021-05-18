@@ -2,7 +2,7 @@
 // https://www.mapbox.com/install/
 
 mapboxgl.accessToken =
-    "pk.eyJ1Ijoic2h1LXZybyIsImEiOiJja2x4bndlYjUwMGhqMnJxN3oyYWE3cjRiIn0.b3G5Z9mGlV7XiSaSAwunEA-1";
+    "pk.eyJ1Ijoic2h1LXZybyIsImEiOiJja2x4bndlYjUwMGhqMnJxN3oyYWE3cjRiIn0.b3G5Z9mGlV7XiSaSAwunEA";
 var map = new mapboxgl.Map({
     style: "mapbox://styles/mapbox/light-v10",
     center: [90.3911645, 23.7494284], // Longitude, latitude
@@ -105,6 +105,7 @@ function submitEmail() {
     let param = {
         method: "POST",
         from_name: form_name.value,
+        from_email: email.value,
         to_name: "Shuvro!",
         subject: subject.value,
         message: message.value,
