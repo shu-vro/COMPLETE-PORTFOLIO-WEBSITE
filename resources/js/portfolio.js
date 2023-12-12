@@ -149,20 +149,16 @@ $(document).ready(() => {
                     category: "Web Development",
                     project_brief: "A recent cyber security bootcamp graduate, knowing a variety of network security componants. Studying for the CompTIA Sec+ exam. Two years of experience as a Web Developer. An excellent self-starter, problem solver, and team player. Solid technical, analytical, and communication skills. Passionate and fast learner with the ability to grasp new threats, concepts, and technologies. Every morning, I wake up with a cup of coffee and read about the latest cyber attacks in the news...with my chickens. This portfolio was made by me using JS and Node",
 
-                    project_date: "2019",
+                    project_date: "2023",
                     project_client: "XYZ Corporation",
                     project_link: `www.${website}.com`,
 
                     image: [
-                        "resources/img/portfolios/web/1.jpg",
-                        "resources/img/portfolios/web/2.jpg",
-                        "resources/img/portfolios/web/3.jpg",
+                        "resources/img/portfolios/card/beedec-bee.webp",
+                        "resources/img/portfolios/card/node-icon.jpg.jpg,
+                        "resources/img/portfolios/card/sql-injection-seringue-250x250.png",
                         "resources/img/portfolios/web/4.jpg",
-                        "resources/img/web_design.jpg",
-                        "resources/img/web_design.jpg",
-                        "resources/img/web_design.jpg",
-                        "resources/img/web_design.jpg",
-                        "resources/img/web_design.jpg",
+                        
                     ],
                 });
             } else if (card.classList.contains("logo")) {
