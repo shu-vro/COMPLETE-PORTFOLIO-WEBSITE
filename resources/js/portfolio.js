@@ -147,11 +147,7 @@ $(document).ready(() => {
                 portfolioView({
                     namePlate: card.querySelector(".title").textContent,
                     category: "Web Development",
-                    project_brief: `Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. At corrupti modi perferendis
-                                    iure corporis dolores minus asperiores nemo
-                                    debitis veritatis id placeat, similique eum
-                                    recusandae ipsa quia cum earum nam?`,
+                    project_brief: "A recent cyber security bootcamp graduate, knowing a variety of network security componants. Studying for the CompTIA Sec+ exam. Two years of experience as a Web Developer. An excellent self-starter, problem solver, and team player. Solid technical, analytical, and communication skills. Passionate and fast learner with the ability to grasp new threats, concepts, and technologies. Every morning, I wake up with a cup of coffee and read about the latest cyber attacks in the news...with my chickens. This portfolio was made by me using JS and Node",
 
                     project_date: "2019",
                     project_client: "XYZ Corporation",
