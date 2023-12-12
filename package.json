@@ -1,0 +1,77 @@
+{
+  "name": "COMPLETE-PORTFOLIO",
+  "version": "1.0.0",
+  "description": "COMPLETE-PORTFOLIO",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/server.js",
+    "build": "npm run build-babel",
+    "build-babel": "npx babel src -d lib",
+    "lint": "eslint .",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelissaTanksley/COMPLETE-PORTFOLIO.git"
+  },
+  "keywords": [
+    "cyber",
+    "security",
+    "analyst",
+    "threats",
+    "attacks",
+    "malware",
+    "problem",
+    "solver",
+    "vulnerabilitites",
+    "ghidra",
+    "NIST",
+    "collaborator",
+    "team",
+    "player"
+  ],
+  "author": "Melissa Tanksley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelissaTanksley/COMPLETE-PORTFOLIO/issues"
+  },
+  "homepage": "https://github.com/MelissaTanksley/COMPLETE-PORTFOLIO#readme",
+  
+  "dependencies": {
+    "joi": "^17.11.0",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "autoprefixer": "^9.4.7",
+    "browser-sync": "^2.17.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-data": "^1.2.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-rollup": "^2.11.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1",
+    "gulp.spritesmith": "^6.2.1",
+    "merge-stream": "^1.0.0",
+    "postcss-csso": "^3.0.0",
+    "require-dir": "^1.2.0",
+    "rollup": "^1.2.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "run-sequence": "^2.2.1",
+    "vinyl-paths": "^2.1.0"
+  }
+}
