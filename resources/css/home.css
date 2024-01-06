@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
 .home {
     background-color: #0d1117;
@@ -8,7 +8,7 @@
     min-width: 100vh;
     min-height: 100vh
 }
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
 
 
 *{
@@ -53,11 +53,7 @@
 {
     background: linear-gradient(45deg,#00ccff,#0c1538,#0c1538,#d400d4);
 }
-.conteiner button:nth-child(3):before,
-.conteiner button:nth-child(3)::after
-{
-    background: linear-gradient(45deg,#00ccff,#0c1538,#0c1538,#d400d4);
-}
+
 .conteiner button:hover:before
 {
     inset: -3px;
