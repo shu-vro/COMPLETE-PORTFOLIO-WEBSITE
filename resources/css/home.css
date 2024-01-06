@@ -17,14 +17,14 @@
     box-sizing: border-box;
     font-family: 'Poppins' , sans-serif;
 }
-.container
+.conteiner
 {
    display: flex;
    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.container button
+.conteiner button
 {
     position: relative;
     width: 180px;
@@ -34,8 +34,8 @@
     margin: 20px;
 
 }
-.container button::before,
-.container button::after
+.conteiner button::before,
+.conteiner button::after
 {
     content: '';
     position: absolute;
@@ -43,31 +43,31 @@
     background-color: ;
     transition: 0.6s;
 }
-.container button:nth-child(1):before,
-.container button:nth-child(1)::after
+.conteiner button:nth-child(1):before,
+.conteiner button:nth-child(1)::after
 {
   background: linear-gradient(45deg,#ff075b,#0c1538,#0c1538,#1aff22);
 }
-.container button:nth-child(2):before,
-.container button:nth-child(2)::after
+.conteiner button:nth-child(2):before,
+.conteiner button:nth-child(2)::after
 {
     background: linear-gradient(45deg,#00ccff,#0c1538,#0c1538,#d400d4);
 }
-.container button:nth-child(3):before,
-.container button:nth-child(3)::after
+.conteiner button:nth-child(3):before,
+.conteiner button:nth-child(3)::after
 {
     background: linear-gradient(45deg,#00ccff,#0c1538,#0c1538,#d400d4);
 }
-.container button:hover:before
+.conteiner button:hover:before
 {
     inset: -3px;
 }
-.container button:hover:after
+.conteiner button:hover:after
 {
     inset: -3px;
     filter: blur(10px);
 }
-.container button span
+.conteiner button span
 {
     position: absolute;
     top: 0;
@@ -88,7 +88,7 @@
     overflow: hidden;
     
 }
-.container button span::before
+.conteiner button span::before
 {
     content: ;
     position: absolute;
