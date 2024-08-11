@@ -20,6 +20,9 @@ concurrency:
     group: "pages"
     cancel-in-progress: true
 
+env:
+    VITE_MAPBOX_ACCESS_TOKEN: ${{ secrets.VITE_MAPBOX_ACCESS_TOKEN }}
+    VITE_EMAILJS_ACCESS_TOKEN: ${{ secrets.VITE_EMAILJS_ACCESS_TOKEN }}
 jobs:
     # Single deploy job since we're just deploying
     deploy:
@@ -39,9 +42,6 @@ jobs:
               run: npm ci
             - name: Build
               run: npm run build
-              env:
-                  VITE_API_KEY: ${{ secrets.VITE_MAPBOX_ACCESS_TOKEN }}
-                  VITE_API_URL: ${{ secrets.VITE_EMAILJS_ACCESS_TOKEN }}
             - name: Setup Pages
               uses: actions/configure-pages@v4
             - name: Upload artifact
