@@ -9,27 +9,24 @@
         <title>Document</title>
         <link
             rel="stylesheet"
-            href="resources/swiper js/swiper-bundle.min.css"
-        />
+            href="./resources/swiper js/swiper-bundle.min.css" />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        />
-        <link rel="stylesheet" href="resources/css/loader.css" />
-        <link rel="stylesheet" href="resources/css/hamburger.css" />
-        <link rel="stylesheet" href="resources/css/home.css" />
-        <link rel="stylesheet" href="resources/css/about.css" />
-        <link rel="stylesheet" href="resources/css/services.css">
-        <link rel="stylesheet" href="resources/css/portfolio.css" />
-        <link rel="stylesheet" href="resources/css/blog.css" />
-        <link rel="stylesheet" href="resources/css/contact.css" />
-        <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
-        <link rel="stylesheet" href="resources/css/style.css" />
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="stylesheet" href="./resources/css/loader.css" />
+        <link rel="stylesheet" href="./resources/css/hamburger.css" />
+        <link rel="stylesheet" href="./resources/css/home.css" />
+        <link rel="stylesheet" href="./resources/css/about.css" />
+        <link rel="stylesheet" href="./resources/css/services.css" />
+        <link rel="stylesheet" href="./resources/css/portfolio.css" />
+        <link rel="stylesheet" href="./resources/css/blog.css" />
+        <link rel="stylesheet" href="./resources/css/contact.css" />
+        <link href="./resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
         <link
             rel="shortcut icon"
-            href="resources/img/favicon.ico"
-            type="image/x-icon"
-        />
+            href="./resources/img/favicon.ico"
+            type="image/x-icon" />
     </head>
     <body onload="loaded()">
         <div class="loader">
@@ -72,14 +69,26 @@
                         >about</a
                     >
                 </li>
-                <li><a href="#" onclick="services(); animate6.play();">services</a></li>
+                <li>
+                    <a href="#" onclick="services(); animate6.play();"
+                        >services</a
+                    >
+                </li>
                 <li><a href="#" onclick="portfolio()">portfolio</a></li>
                 <li><a href="#" onclick="blog()">blog</a></li>
                 <li>
                     <a href="#" onclick="contact(); animate5.play()">contact</a>
                 </li>
             </ul>
-            <p>&copy; 2021 Shuvro.</p>
+            <p>
+                &copy; 2024
+                <a
+                    href="https://github.com/shu-vro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Shuvro</a
+                >.
+            </p>
         </nav>
 
         <div class="container">
@@ -132,8 +141,7 @@
 
                         <div class="side-nav">
                             <button
-                                onclick="about(); animate3.play(); animate4.play();"
-                            >
+                                onclick="about(); animate3.play(); animate4.play();">
                                 <span class="w">W</span>
                                 <span class="tooltip"> why you? </span>
                             </button>
@@ -200,23 +208,19 @@
                         <svg
                             class="wave absolute"
                             xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 1450 320"
-                        >
+                            viewBox="0 0 1450 320">
                             <path
                                 fill-opacity="1"
-                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                            ></path>
+                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                         </svg>
 
                         <svg
                             class="wave absolute opposite"
                             xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 1450 320"
-                        >
+                            viewBox="0 0 1450 320">
                             <path
                                 fill-opacity="1"
-                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                            ></path>
+                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                         </svg>
                     </div>
 
@@ -237,7 +241,7 @@
                                 </p>
                                 <a
                                     class="button download"
-                                    href="resources/img/bg1.png"
+                                    href="./resources/img/bg1.png"
                                     download="shuvro_cv"
                                     >Download CV</a
                                 >
@@ -279,8 +283,7 @@
                                 <div class="percent">
                                     <div
                                         class="progress"
-                                        style="width: 90%"
-                                    ></div>
+                                        style="width: 90%"></div>
                                 </div>
                             </div>
                             <div class="skill">
@@ -289,8 +292,7 @@
                                 <div class="percent">
                                     <div
                                         class="progress"
-                                        style="width: 75%"
-                                    ></div>
+                                        style="width: 75%"></div>
                                 </div>
                             </div>
                             <div class="skill">
@@ -299,8 +301,7 @@
                                 <div class="percent">
                                     <div
                                         class="progress"
-                                        style="width: 65%"
-                                    ></div>
+                                        style="width: 65%"></div>
                                 </div>
                             </div>
                             <div class="skill">
@@ -309,8 +310,7 @@
                                 <div class="percent">
                                     <div
                                         class="progress"
-                                        style="width: 50%"
-                                    ></div>
+                                        style="width: 50%"></div>
                                 </div>
                             </div>
                             <div class="skill">
@@ -319,8 +319,7 @@
                                 <div class="percent">
                                     <div
                                         class="progress"
-                                        style="width: 45%"
-                                    ></div>
+                                        style="width: 45%"></div>
                                 </div>
                             </div>
                             <div class="skill">
@@ -329,8 +328,7 @@
                                 <div class="percent">
                                     <div
                                         class="progress"
-                                        style="width: 55%"
-                                    ></div>
+                                        style="width: 55%"></div>
                                 </div>
                             </div>
                         </div>
@@ -487,7 +485,7 @@
                         </p>
                     </div>
                     <div class="capabilities left move-little-down">
-                        <img src="resources/img/elements/web_bg.png" alt="" />
+                        <img src="./resources/img/elements/web_bg.png" alt="" />
                         <p class="c_content">
                             <span class="c_title">Web</span>
                             His creative journey started with Web Design. To
@@ -513,20 +511,18 @@
                             <i class="far fa-arrow-alt-circle-right"></i>
                         </p>
                         <img
-                            src="resources/img/elements/graphics_bg.png"
-                            alt=""
-                        />
+                            src="./resources/img/elements/graphics_bg.png"
+                            alt="" />
                     </div>
                     <div class="capabilities left">
                         <img
-                            src="resources/img/elements/seo_bg.png"
+                            src="./resources/img/elements/seo_bg.png"
                             alt=""
                             style="
                                 background: #2929292f;
                                 backdrop-filter: blur(4px);
                                 border-radius: 40px;
-                            "
-                        />
+                            " />
                         <p class="c_content">
                             <span class="c_title">SEO</span>
                             With 1+ years of experience in the Digital industry,
@@ -544,25 +540,22 @@
                             <a href="#" onclick="portfolio()">Profile World</a>
                             <i class="far fa-arrow-alt-circle-right"></i>
                             <img
-                                src="resources/img/portfolios/app/2.jpg"
-                                alt="portfolio"
-                            />
+                                src="./resources/img/portfolios/app/2.jpg"
+                                alt="portfolio" />
                         </div>
                         <div class="foot-link">
                             <a href="#" onclick="portfolio()">Art Director</a>
                             <i class="far fa-arrow-alt-circle-right"></i>
                             <img
-                                src="resources/img/portfolios/card/2.jpg"
-                                alt="portfolio"
-                            />
+                                src="./resources/img/portfolios/card/2.jpg"
+                                alt="portfolio" />
                         </div>
                         <div class="foot-link">
                             <a href="#" onclick="portfolio()">Lora Website</a>
                             <i class="far fa-arrow-alt-circle-right"></i>
                             <img
-                                src="resources/img/portfolios/web/1.jpg"
-                                alt="portfolio"
-                            />
+                                src="./resources/img/portfolios/web/1.jpg"
+                                alt="portfolio" />
                         </div>
                     </div>
                 </div>
@@ -589,8 +582,7 @@
                                             style="
                                                 color: #999;
                                                 padding-left: 15px;
-                                            "
-                                        >
+                                            ">
                                             Lorem ipsum, dolor sit amet
                                             consectetur adipisicing elit. At
                                             corrupti modi perferendis iure
@@ -714,193 +706,169 @@
                     <div class="mymixcont">
                         <div class="mix web">
                             <img
-                                src="resources/img/portfolios/web/1.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/web/1.jpg"
+                                alt="" />
                             <span class="title">Lora Website</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix icon">
                             <img
-                                src="resources/img/portfolios/icon/5.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/icon/5.jpg"
+                                alt="" />
                             <span class="title">Water World</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix card">
                             <img
-                                src="resources/img/portfolios/card/1.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/card/1.jpg"
+                                alt="" />
                             <span class="title">Brand Photography</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix web">
                             <img
-                                src="resources/img/portfolios/web/2.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/web/2.jpg"
+                                alt="" />
                             <span class="title">Student Guide</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix app">
                             <img
-                                src="resources/img/portfolios/app/1.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/app/1.jpg"
+                                alt="" />
                             <span class="title">World View</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix card">
                             <img
-                                src="resources/img/portfolios/card/2.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/card/2.jpg"
+                                alt="" />
                             <span class="title">Art Director</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix web">
                             <img
-                                src="resources/img/portfolios/web/3.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/web/3.jpg"
+                                alt="" />
                             <span class="title">Web App Pro</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix card">
                             <img
-                                src="resources/img/portfolios/card/3.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/card/3.jpg"
+                                alt="" />
                             <span class="title">Reauty</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix web">
                             <img
-                                src="resources/img/portfolios/web/4.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/web/4.jpg"
+                                alt="" />
                             <span class="title">Sonor Design</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix card">
                             <img
-                                src="resources/img/portfolios/card/4.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/card/4.jpg"
+                                alt="" />
                             <span class="title">Richard Tan</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix logo">
                             <img
-                                src="resources/img/portfolios/logo/1.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/logo/1.jpg"
+                                alt="" />
                             <span class="title">Kitty Pic</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix icon">
                             <img
-                                src="resources/img/portfolios/icon/4.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/icon/4.jpg"
+                                alt="" />
                             <span class="title">Domine</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix app">
                             <img
-                                src="resources/img/portfolios/app/2.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/app/2.jpg"
+                                alt="" />
                             <span class="title">Profile World</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix logo">
                             <img
-                                src="resources/img/portfolios/logo/2.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/logo/2.jpg"
+                                alt="" />
                             <span class="title">Specialisterne</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix logo">
                             <img
-                                src="resources/img/portfolios/logo/3.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/logo/3.jpg"
+                                alt="" />
                             <span class="title">Native Design</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix card">
                             <img
-                                src="resources/img/portfolios/card/5.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/card/5.jpg"
+                                alt="" />
                             <span class="title">Sriram Mohan</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix logo">
                             <img
-                                src="resources/img/portfolios/logo/4.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/logo/4.jpg"
+                                alt="" />
                             <span class="title">Book Worm</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix icon">
                             <img
-                                src="resources/img/portfolios/icon/2.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/icon/2.jpg"
+                                alt="" />
                             <span class="title">Football FC</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix logo">
                             <img
-                                src="resources/img/portfolios/logo/5.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/logo/5.jpg"
+                                alt="" />
                             <span class="title">Free Notes</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix icon">
                             <img
-                                src="resources/img/portfolios/icon/1.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/icon/1.jpg"
+                                alt="" />
                             <span class="title">Insta Genre</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix logo">
                             <img
-                                src="resources/img/portfolios/logo/6.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/logo/6.jpg"
+                                alt="" />
                             <span class="title">Movie Sock</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix logo">
                             <img
-                                src="resources/img/portfolios/logo/7.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/logo/7.jpg"
+                                alt="" />
                             <span class="title">Village Community Church</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix app">
                             <img
-                                src="resources/img/portfolios/app/3.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/app/3.jpg"
+                                alt="" />
                             <span class="title">Weathery</span>
                             <span class="port_link">View Project</span>
                         </div>
                         <div class="mix icon">
                             <img
-                                src="resources/img/portfolios/icon/3.jpg"
-                                alt=""
-                            />
+                                src="./resources/img/portfolios/icon/3.jpg"
+                                alt="" />
                             <span class="title">Fav Shop</span>
                             <span class="port_link">View Project</span>
                         </div>
@@ -915,7 +883,7 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
+                                <img src="./resources/img/favicon.ico" alt="" />
                                 <h4>Erik Lasher</h4>
                                 <div class="rating">
                                     <label>&starf;</label>
@@ -933,7 +901,7 @@
                                 </p>
                             </div>
                             <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
+                                <img src="./resources/img/favicon.ico" alt="" />
                                 <h4>Erik Lasher</h4>
                                 <div class="rating">
                                     <label>&starf;</label>
@@ -951,7 +919,7 @@
                                 </p>
                             </div>
                             <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
+                                <img src="./resources/img/favicon.ico" alt="" />
                                 <h4>Erik Lasher</h4>
                                 <div class="rating">
                                     <label>&starf;</label>
@@ -969,7 +937,7 @@
                                 </p>
                             </div>
                             <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
+                                <img src="./resources/img/favicon.ico" alt="" />
                                 <h4>Erik Lasher</h4>
                                 <div class="rating">
                                     <label>&starf;</label>
@@ -987,7 +955,7 @@
                                 </p>
                             </div>
                             <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
+                                <img src="./resources/img/favicon.ico" alt="" />
                                 <h4>Erik Lasher</h4>
                                 <div class="rating">
                                     <label>&starf;</label>
@@ -1005,7 +973,7 @@
                                 </p>
                             </div>
                             <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
+                                <img src="./resources/img/favicon.ico" alt="" />
                                 <h4>Erik Lasher</h4>
                                 <div class="rating">
                                     <label>&starf;</label>
@@ -1044,8 +1012,7 @@
                             <i class="fas fa-home"></i>
                             <span class="iname">Address</span>
                             <a
-                                href="https://www.google.com/maps/place/Sherpur+Town+Hall/@25.0136644,90.0140045,355m/data=!3m1!1e3!4m5!3m4!1s0x3757d6136d793499:0x8c22620664dc6a37!8m2!3d25.0156371!4d90.0168872"
-                            >
+                                href="https://www.google.com/maps/place/Sherpur+Town+Hall/@25.0136644,90.0140045,355m/data=!3m1!1e3!4m5!3m4!1s0x3757d6136d793499:0x8c22620664dc6a37!8m2!3d25.0156371!4d90.0168872">
                                 <h3>Govt. Girls' School Road</h3>
                                 <span>Kharampur, Sherpur</span><br />
                                 <span>Bangladesh</span>
@@ -1073,8 +1040,7 @@
                                 class="fname"
                                 id="fname"
                                 placeholder="Full Name"
-                                required
-                            />
+                                required />
                         </div>
                         <div class="inp_field">
                             <i class="fas fa-envelope"></i>
@@ -1084,8 +1050,7 @@
                                 class="email"
                                 id="email"
                                 placeholder="Email"
-                                required
-                            />
+                                required />
                         </div>
                         <div class="inp_field">
                             <i class="fas fa-angle-double-right"></i>
@@ -1095,8 +1060,7 @@
                                 class="subject"
                                 id="subject"
                                 placeholder="Subject"
-                                required
-                            />
+                                required />
                         </div>
                         <textarea
                             name="message"
@@ -1105,8 +1069,7 @@
                             class="message"
                             id="message"
                             placeholder="Message"
-                            required
-                        ></textarea>
+                            required></textarea>
                         <button class="submit" id="submit">Submit</button>
                     </form>
                 </div>
@@ -1114,42 +1077,111 @@
         </div>
 
         <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
-        <script src="resources/js/jquery.min.js"></script>
+        <script src="./resources/js/jquery.min.js"></script>
         <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
-        <script src="resources/js/mixitup.min.js"></script>
+        <script src="./resources/js/mixitup.min.js"></script>
         <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, blog.js]----------------->
-        <script src="resources/swiper js/swiper-bundle.min.js"></script>
+        <script src="./resources/swiper js/swiper-bundle.min.js"></script>
         <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
-        <script src="resources/mapbox-gl/mapbox-gl.js"></script>
+        <script src="./resources/mapbox-gl/mapbox-gl.js"></script>
         <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
-        <script src="resources/js/email.min.js"></script>
+        <script src="./resources/js/email.min.js"></script>
         <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
-        <script type="text/javascript">
+        <script type="module">
             (function () {
-                emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
+                emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
             })();
         </script>
         <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
-        <script src="resources/js/vanilla-tilt.min.js"></script>
+        <script src="./resources/js/vanilla-tilt.min.js"></script>
         <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
-        <script src="resources/js/anime.min.js"></script>
+        <script src="./resources/js/anime.min.js"></script>
         <!-----------------LOCAL (HOME)----------------->
-        <script src="resources/js/home.js"></script>
+        <script src="./resources/js/home.js"></script>
         <!-----------------LOCAL (ABOUT)----------------->
-        <script src="resources/js/about.js"></script>
+        <script src="./resources/js/about.js"></script>
         <!-----------------LOCAL (SERVICES)----------------->
-        <script src="resources/js/services.js"></script>
+        <script src="./resources/js/services.js"></script>
         <!-----------------LOCAL (PORTFOLIO)----------------->
-        <script src="resources/js/portfolio.js"></script>
+        <script src="./resources/js/portfolio.js"></script>
         <!-----------------LOCAL (BLOG)----------------->
-        <script src="resources/js/blog.js"></script>
+        <script src="./resources/js/blog.js"></script>
         <!-----------------LOCAL (CONTACT)----------------->
-        <script src="resources/js/contact.js"></script>
+        <script type="module">
+            // For more, goto:
+            // https://www.mapbox.com/install/
+
+            mapboxgl.accessToken =
+                import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || "";
+            var map = new mapboxgl.Map({
+                style: "mapbox://styles/mapbox/light-v10",
+                center: [90.3911645, 23.7494284], // Longitude, latitude
+                zoom: 18.5, // Zoom level
+                pitch: 45,
+                bearing: -17.6,
+                container: "map", // Our #map target.
+                antialias: true,
+            });
+
+            map.on("load", function () {
+                // Insert the layer beneath any symbol layer.
+                var layers = map.getStyle().layers;
+
+                var labelLayerId;
+                for (var i = 0; i < layers.length; i++) {
+                    if (
+                        layers[i].type === "symbol" &&
+                        layers[i].layout["text-field"]
+                    ) {
+                        labelLayerId = layers[i].id;
+                        break;
+                    }
+                }
+
+                map.addLayer(
+                    {
+                        id: "3d-buildings",
+                        source: "composite",
+                        "source-layer": "building",
+                        filter: ["==", "extrude", "true"],
+                        type: "fill-extrusion",
+                        minzoom: 15,
+                        paint: {
+                            "fill-extrusion-color": "#aaa",
+
+                            // use an 'interpolate' expression to add a smooth transition effect to the
+                            // buildings as the user zooms in
+                            "fill-extrusion-height": [
+                                "interpolate",
+                                ["linear"],
+                                ["zoom"],
+                                15,
+                                0,
+                                15.05,
+                                ["get", "height"],
+                            ],
+                            "fill-extrusion-base": [
+                                "interpolate",
+                                ["linear"],
+                                ["zoom"],
+                                15,
+                                0,
+                                15.05,
+                                ["get", "min_height"],
+                            ],
+                            "fill-extrusion-opacity": 0.6,
+                        },
+                    },
+                    labelLayerId
+                );
+            });
+        </script>
+        <script src="./resources/js/contact.js" defer></script>
         <!-----------------LOCAL (MAIN FILE)----------------->
-        <script src="resources/js/main.js"></script>
+        <script src="./resources/js/main.js"></script>
 
         <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
-        <script>
+        <script defer>
             const animate1 = anime.timeline({
                 targets: ".circle",
                 loop: true,
@@ -1219,12 +1251,12 @@
                 autoplay: false,
                 easing: "easeOutQuint",
             });
-            
+
             const animate6 = anime({
-                targets: ['.services .t_dummy', '.services .hero-text'],
+                targets: [".services .t_dummy", ".services .hero-text"],
                 duration: 1000,
                 scaleX: [0, 1],
-                delay: anime.stagger(300, {start: 1000}),
+                delay: anime.stagger(300, { start: 1000 }),
                 autoplay: false,
             });
 
