@@ -1077,13 +1077,13 @@
         </div>
 
         <script>
-            console.log("testing script", import.meta.env);
+            console.log("testing script", import.meta.env, process.env);
         </script>
         <script type="module">
-            console.log("testing module", import.meta.env);
+            console.log("testing module", import.meta.env, process.env);
         </script>
         <script defer>
-            console.log("testing defer", import.meta.env);
+            console.log("testing defer", import.meta.env, process.env);
         </script>
         <script defer type="module">
             console.log("testing defer + module", import.meta.env);
