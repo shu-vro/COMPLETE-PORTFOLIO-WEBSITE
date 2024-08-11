@@ -1087,11 +1087,6 @@
         <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
         <script src="./resources/js/email.min.js"></script>
         <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
-        <script type="module">
-            (function () {
-                emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
-            })();
-        </script>
         <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
         <script src="./resources/js/vanilla-tilt.min.js"></script>
         <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
@@ -1107,76 +1102,7 @@
         <!-----------------LOCAL (BLOG)----------------->
         <script src="./resources/js/blog.js"></script>
         <!-----------------LOCAL (CONTACT)----------------->
-        <script type="module">
-            // For more, goto:
-            // https://www.mapbox.com/install/
-
-            mapboxgl.accessToken =
-                import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || "";
-            var map = new mapboxgl.Map({
-                style: "mapbox://styles/mapbox/light-v10",
-                center: [90.3911645, 23.7494284], // Longitude, latitude
-                zoom: 18.5, // Zoom level
-                pitch: 45,
-                bearing: -17.6,
-                container: "map", // Our #map target.
-                antialias: true,
-            });
-
-            map.on("load", function () {
-                // Insert the layer beneath any symbol layer.
-                var layers = map.getStyle().layers;
-
-                var labelLayerId;
-                for (var i = 0; i < layers.length; i++) {
-                    if (
-                        layers[i].type === "symbol" &&
-                        layers[i].layout["text-field"]
-                    ) {
-                        labelLayerId = layers[i].id;
-                        break;
-                    }
-                }
-
-                map.addLayer(
-                    {
-                        id: "3d-buildings",
-                        source: "composite",
-                        "source-layer": "building",
-                        filter: ["==", "extrude", "true"],
-                        type: "fill-extrusion",
-                        minzoom: 15,
-                        paint: {
-                            "fill-extrusion-color": "#aaa",
-
-                            // use an 'interpolate' expression to add a smooth transition effect to the
-                            // buildings as the user zooms in
-                            "fill-extrusion-height": [
-                                "interpolate",
-                                ["linear"],
-                                ["zoom"],
-                                15,
-                                0,
-                                15.05,
-                                ["get", "height"],
-                            ],
-                            "fill-extrusion-base": [
-                                "interpolate",
-                                ["linear"],
-                                ["zoom"],
-                                15,
-                                0,
-                                15.05,
-                                ["get", "min_height"],
-                            ],
-                            "fill-extrusion-opacity": 0.6,
-                        },
-                    },
-                    labelLayerId
-                );
-            });
-        </script>
-        <script src="./resources/js/contact.js" defer></script>
+        <script src="./resources/js/contact.js" defer type="module"></script>
         <!-----------------LOCAL (MAIN FILE)----------------->
         <script src="./resources/js/main.js"></script>
 

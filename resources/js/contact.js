@@ -1,55 +1,68 @@
 // The 'building' layer in the mapbox-streets vector source contains building-height
 // data from OpenStreetMap.
-// map.on("load", function () {
-//     // Insert the layer beneath any symbol layer.
-//     var layers = map.getStyle().layers;
+// For more, goto:
+// https://www.mapbox.com/install/
 
-//     var labelLayerId;
-//     for (var i = 0; i < layers.length; i++) {
-//         if (layers[i].type === "symbol" && layers[i].layout["text-field"]) {
-//             labelLayerId = layers[i].id;
-//             break;
-//         }
-//     }
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || "";
+var map = new mapboxgl.Map({
+    style: "mapbox://styles/mapbox/light-v10",
+    center: [90.3911645, 23.7494284], // Longitude, latitude
+    zoom: 18.5, // Zoom level
+    pitch: 45,
+    bearing: -17.6,
+    container: "map", // Our #map target.
+    antialias: true,
+});
 
-//     map.addLayer(
-//         {
-//             id: "3d-buildings",
-//             source: "composite",
-//             "source-layer": "building",
-//             filter: ["==", "extrude", "true"],
-//             type: "fill-extrusion",
-//             minzoom: 15,
-//             paint: {
-//                 "fill-extrusion-color": "#aaa",
+map.on("load", function () {
+    // Insert the layer beneath any symbol layer.
+    var layers = map.getStyle().layers;
 
-//                 // use an 'interpolate' expression to add a smooth transition effect to the
-//                 // buildings as the user zooms in
-//                 "fill-extrusion-height": [
-//                     "interpolate",
-//                     ["linear"],
-//                     ["zoom"],
-//                     15,
-//                     0,
-//                     15.05,
-//                     ["get", "height"],
-//                 ],
-//                 "fill-extrusion-base": [
-//                     "interpolate",
-//                     ["linear"],
-//                     ["zoom"],
-//                     15,
-//                     0,
-//                     15.05,
-//                     ["get", "min_height"],
-//                 ],
-//                 "fill-extrusion-opacity": 0.6,
-//             },
-//         },
-//         labelLayerId
-//     );
-// });
+    var labelLayerId;
+    for (var i = 0; i < layers.length; i++) {
+        if (layers[i].type === "symbol" && layers[i].layout["text-field"]) {
+            labelLayerId = layers[i].id;
+            break;
+        }
+    }
 
+    map.addLayer(
+        {
+            id: "3d-buildings",
+            source: "composite",
+            "source-layer": "building",
+            filter: ["==", "extrude", "true"],
+            type: "fill-extrusion",
+            minzoom: 15,
+            paint: {
+                "fill-extrusion-color": "#aaa",
+
+                // use an 'interpolate' expression to add a smooth transition effect to the
+                // buildings as the user zooms in
+                "fill-extrusion-height": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    15,
+                    0,
+                    15.05,
+                    ["get", "height"],
+                ],
+                "fill-extrusion-base": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    15,
+                    0,
+                    15.05,
+                    ["get", "min_height"],
+                ],
+                "fill-extrusion-opacity": 0.6,
+            },
+        },
+        labelLayerId
+    );
+});
 function vanillaTilt(element) {
     VanillaTilt.init(document.querySelector(element), {
         max: 10,
@@ -85,6 +98,8 @@ submit.addEventListener("click", () => {
         submitEmail();
     }
 });
+
+emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
 
 function submitEmail() {
     let param = {
