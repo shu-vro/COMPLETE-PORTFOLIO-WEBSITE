@@ -35,7 +35,7 @@ function portfolio() {
     layers[3].classList.add("active");
 }
 
-function blog() {
+function comments() {
     collapse();
     layers[4].classList.add("active");
     revealText1.classList.add("reveal");
@@ -58,7 +58,6 @@ let content = document.querySelector(".content");
 content.querySelectorAll("p")[1].innerHTML = content
     .querySelectorAll("p")[1]
     .textContent.replace(/\S/g, `<span>$&</span>`);
-
 
 tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
