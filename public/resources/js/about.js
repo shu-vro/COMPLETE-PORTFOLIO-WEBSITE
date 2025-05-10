@@ -1,24 +1,22 @@
-let about_nav_btn = document.querySelectorAll(".about_nav a");
-const about_container = document.querySelector(".about_container");
-const myImage = document.querySelector(".layer2 .wrapper .face2");
+const aboutNavButtons = document.querySelectorAll(".about_nav a");
+const aboutContainer = document.querySelector(".about_container");
 
-function collapse2() {
-    about_nav_btn.forEach((link) => {
-        link.classList.remove("active");
-    });
-    about_container.classList.remove("one");
-    about_container.classList.remove("two");
-    about_container.classList.remove("three");
+function resetActiveState() {
+    aboutNavButtons.forEach((button) => button.classList.remove("active"));
+    ["one", "two", "three"].forEach((className) =>
+        aboutContainer.classList.remove(className)
+    );
 }
 
-function slider1(selector, text) {
-    selector.addEventListener("click", () => {
-        collapse2();
-        selector.classList.add("active");
-        about_container.classList.add(text);
-    });
+function handleButtonClick(button) {
+    const className = button.dataset.text;
+
+    resetActiveState();
+
+    button.classList.add("active");
+    aboutContainer.classList.add(className);
 }
 
-slider1(about_nav_btn[0], about_nav_btn[0].dataset.text);
-slider1(about_nav_btn[1], about_nav_btn[1].dataset.text);
-slider1(about_nav_btn[2], about_nav_btn[2].dataset.text);
+aboutNavButtons.forEach((button) => {
+    button.addEventListener("click", () => handleButtonClick(button));
+});
